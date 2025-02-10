@@ -1,7 +1,6 @@
 #include "../../Header/Core/GameWindowManager.h"
 
-namespace Core
-{
+namespace Core {
     void GameWindowManager::initialize() {
         // Allocate memory for the render window object
         game_window = new RenderWindow();
