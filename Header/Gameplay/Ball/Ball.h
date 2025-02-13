@@ -1,15 +1,16 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "../../Header/Gameplay/Paddle/Paddle.h"
 using namespace sf;
 using namespace std;
 
 namespace Gameplay {
     class Ball {
     private:
+        float ball_speed = .5f;
+        Vector2f velocity = Vector2f(ball_speed, ball_speed);
+
         Texture pong_ball_texture;
         Sprite pong_ball_sprite;
-
         string texture_path = "Assets/Textures/Ball.png";
 
         const float scale_x = 0.06f;
@@ -20,6 +21,7 @@ namespace Gameplay {
 
         void loadTexture();
         void initializeVariables();
+        void move();
 
     public:
         Ball();

@@ -10,9 +10,9 @@ namespace Core {
 
     void GameWindowManager::createGameWindow() {
         game_window->create(
-            sf::VideoMode::getDesktopMode(),    // Get screen resolution
-            game_title,                        // Window title
-            sf::Style::Fullscreen               // Fullscreen mode
+            VideoMode(game_window_width, game_window_height),    // Get screen resolution
+            game_title                        // Window title
+            //sf::Style::Fullscreen               // Fullscreen mode
         );
     }
 
@@ -35,13 +35,11 @@ namespace Core {
         return game_window;
     }
 
-    void GameWindowManager::clearGameWindow()
-    {
+    void GameWindowManager::clearGameWindow() {
         game_window->clear();
     }
 
-    void GameWindowManager::displayGameWindow()
-    {
+    void GameWindowManager::displayGameWindow() {
         return game_window->display();
     }
 }
