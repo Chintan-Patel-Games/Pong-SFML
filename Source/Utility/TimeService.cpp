@@ -6,7 +6,7 @@ namespace Utility {
 		delta_time = 0;
 	}
 
-	float TimeService::calculateDeltaTime() {
+	float TimeService::calculateDeltaTime() const {
 		// Get time difference in microseconds
 		int delta = std::chrono::duration_cast<std::chrono::microseconds>(
 			std::chrono::steady_clock::now() - previous_time).count();
@@ -28,7 +28,7 @@ namespace Utility {
 		updateDeltaTime();
 	}
 
-	float TimeService::getDeltaTime() {
+	float TimeService::getDeltaTime() const {
 		return delta_time;
 	}
 }

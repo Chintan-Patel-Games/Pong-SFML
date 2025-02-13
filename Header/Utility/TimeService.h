@@ -8,12 +8,12 @@ namespace Utility {
         float delta_time;
 
         void updateDeltaTime();
-        float calculateDeltaTime();
+        float calculateDeltaTime() const;
         void updatePreviousTime(); // Update previous_time to the current time
 
     public:
         void initialize();
         void update();
-        float getDeltaTime();
+        float getDeltaTime() const;
     };
 }

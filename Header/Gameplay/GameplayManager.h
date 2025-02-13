@@ -3,8 +3,10 @@
 #include "../../Header/Gameplay/Ball/Ball.h"
 #include "../../Header/Event/EventManager.h"
 #include "../../Header/Gameplay/Boundary/Boundary.h"
+#include "../../Header/Utility/TimeService.h"
 
 using namespace EventM;
+using namespace Utility;
 
 namespace Gameplay {
 	class GameplayManager {
@@ -20,6 +22,7 @@ namespace Gameplay {
 		Paddle* player2 = nullptr;
 		EventManager* event_manager;
 		Boundary* boundary;
+		TimeService* time_service;
 
 		void initialize();
 
