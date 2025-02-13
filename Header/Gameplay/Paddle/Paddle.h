@@ -1,6 +1,6 @@
 #pragma once
-#include <SFML/Graphics.hpp>
 #include "../../Header/Utility/TimeService.h"
+#include <SFML/Graphics.hpp>
 
 using namespace sf;
 using namespace Utility;
