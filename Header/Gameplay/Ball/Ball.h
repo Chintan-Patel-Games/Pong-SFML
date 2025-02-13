@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "../../Header/Gameplay/Paddle/Paddle.h"
+
 using namespace sf;
 using namespace std;
 
@@ -29,11 +30,14 @@ namespace Gameplay {
         const float scale_x = 0.06f;
         const float scale_y = 0.06f;
 
+        // Boundaries
         const float top_boundary = 20.0f;
         const float bottom_boundary = 700.0f;
-        
         const float left_boundary = 0.0f;
         const float right_boundary = 1280.0f;
+
+        bool had_left_collison = false;
+        bool had_right_collison = false;
 
         //Center Position
         const float center_position_x = 615.0f;
@@ -51,6 +55,10 @@ namespace Gameplay {
 
     public:
         Ball();
+        bool isLeftCollisionOccurred();
+        void updateLeftCollisionState(bool value);
+        bool isRightCollisionOccurred();
+        void updateRightCollisionState(bool value);
         void update(Paddle* player1, Paddle* player2, TimeService* timeService);
         void render(RenderWindow* game_window);
     };
