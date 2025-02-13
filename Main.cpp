@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "../../Header/Core/GameLoop.h"
+
 using namespace sf;
 using namespace Core;
 

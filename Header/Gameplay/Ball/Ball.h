@@ -8,8 +8,7 @@ using namespace std;
 using namespace Sound;
 
 namespace Gameplay {
-    enum class BallState
-    {
+    enum class BallState {
         Idle,
         Moving
     };

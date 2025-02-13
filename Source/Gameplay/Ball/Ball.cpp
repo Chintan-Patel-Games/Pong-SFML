@@ -8,9 +8,8 @@ namespace Gameplay {
     }
 
     void Ball::loadTexture() {
-        if (!pong_ball_texture.loadFromFile(texture_path)) {
+        if (!pong_ball_texture.loadFromFile(texture_path))
             throw std::runtime_error("Failed to load ball texture!");
-        }
     }
 
     void Ball::initializeVariables() {
@@ -28,12 +27,10 @@ namespace Gameplay {
     void Ball::updateDelayTime(float deltaTime) {
         if (current_state == BallState::Idle) {
             elapsed_delay_time += deltaTime;
-            if (elapsed_delay_time >= delay_duration) {
+            if (elapsed_delay_time >= delay_duration)
                 current_state = BallState::Moving;
-            }
-            else {
+            else
                 return;
-            }
         }
     }
 
@@ -61,9 +58,7 @@ namespace Gameplay {
     void Ball::handleBoudaryCollision() {
         FloatRect ball_bounds = pong_ball_sprite.getGlobalBounds();
 
-        if ((ball_bounds.top <= top_boundary && velocity.y < 0) ||
-            (ball_bounds.top + ball_bounds.height >= bottom_boundary && velocity.y > 0))
-        {
+        if ((ball_bounds.top <= top_boundary && velocity.y < 0) || (ball_bounds.top + ball_bounds.height >= bottom_boundary && velocity.y > 0)) {
             velocity.y = -velocity.y;  // Reverse vertical direction
             SoundManager::PlaySoundEffect(SoundType::BALL_BOUNCE);
         }

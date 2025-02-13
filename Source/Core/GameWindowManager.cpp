@@ -25,8 +25,6 @@ namespace Core {
         // Clear window with orange color (R:200, G:50, B:50, A:255)
         game_window->clear(sf::Color(200, 50, 50, 255));
 
-        //draw shapes, sprites, etc 
-
         // Display the changes
         game_window->display();
     }

@@ -47,8 +47,6 @@ namespace Gameplay {
 
 	public:
 		Boundary();
-
-		//void update();
 		void render(RenderWindow* game_window);
 	};
 }
