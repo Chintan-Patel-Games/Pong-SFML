@@ -6,6 +6,7 @@ namespace Gameplay {
 		time_service->initialize();// Start our time tracking
 		event_manager = manager;
 		boundary = new Boundary();
+		ui_service = new UIService();
 		initialize();
 	}
 
@@ -29,5 +30,6 @@ namespace Gameplay {
 		ball->render(game_window);
 		player1->render(game_window);
 		player2->render(game_window);
+		ui_service->render(game_window);
 	}
 }
