@@ -26,7 +26,7 @@ namespace Gameplay {
         Paddle(float position_x, float position_y);
 
         RectangleShape getPaddleSprite();
-        //void reset(float position_x, float position_y);
+        void reset(float position_x, float position_y);
 
         void update(bool move_up_key_pressed, bool move_down_key_pressed, TimeService* timeService);
         void render(RenderWindow* game_window);

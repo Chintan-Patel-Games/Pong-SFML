@@ -28,6 +28,8 @@ namespace Gameplay {
 		UIService* ui_service;
 
 		void initialize();
+		void UpdateScore();
+		void resetPlayers();
 
 	public:
 		GameplayManager(EventManager* manager);
