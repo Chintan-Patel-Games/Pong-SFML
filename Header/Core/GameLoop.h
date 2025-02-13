@@ -21,7 +21,6 @@ namespace Core
 
 	public:
 		void initialize();
-
 		bool isGameRunning();
 		void pollEvent();
 		void update();
