@@ -19,7 +19,7 @@ This is a Pong-inspired game built using SFML. The game features classic gamepla
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pong-game.git
+   git clone https://github.com/Chintan-Patel-Games/Pong-SFML.git
    ```
    
 2. Open the project folder in Visual Studio:
